@@ -1,0 +1,26 @@
+#!/usr/bin/env ruby
+
+numonics = {
+  '0' => 'z',
+  '1' => 't',
+  '2' => 'n',
+  '3' => 'm',
+  '4' => 'r',
+  '5' => 'l',
+  '6' => 'j',
+  '7' => 'k',
+  '8' => 'f',
+  '9' => 'p',
+}
+
+unless ARGV.empty?
+  num = ARGF.argv.join(" ")
+else
+  num = ARGF.read.chomp
+end
+
+num.to_s.split('').each { |d|
+  print numonics.include?(d) ? numonics[d] : d
+}
+puts ""
+STDOUT.flush
