@@ -1,0 +1,9 @@
+.gitignore
+.rubocop.yml
+CODE_OF_CONDUCT.md
+Gemfile
+LICENSE
+README.md
+Rakefile
+bin/numonic
+numonic.gemspec

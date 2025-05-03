@@ -1,6 +1,5 @@
 # frozen_string_literal: true
 
-require "English"
 Gem::Specification.new do |gem|
   gem.name          = "numonic"
   gem.version       = "0.0.2"
@@ -13,7 +12,7 @@ Gem::Specification.new do |gem|
 
   gem.license       = "bsd" # The (three-clause) BSD License
 
-  gem.files         = `git ls-files`.split($OUTPUT_RECORD_SEPARATOR)
+  gem.files         = File.read("Manifest.txt").split
   gem.executables   = gem.files.grep(%r{^bin/}).map { |f| File.basename(f) }
   gem.metadata["rubygems_mfa_required"] = "true"
   gem.required_ruby_version = ">= 2.7.0"
